@@ -18,27 +18,40 @@ There is a small block diagram that shows how the project work, and some of the 
 Here is all the I/O for the game.
 ### Inputs
 In all those states you can use onboard Switch to change background, bird color. 
+
 •	SW[0] is used to change the background between day and night.
+
 •	SW[1] is used to show collision box. (used for debugging).
+
 •	SW[2] is used to disable collision (invisibility).
+
 •	SW[4:3] is used to switch between the bird color 
 
 	00 = yellow, 01 = red, 02 = blue, 03 = yellow.
 •	SW[5] is used to enable / disable sound.
+
 •	SW[15:6] is unused.
+
 •	SW[16] is to enable enemy spawning.(collision unfinished)
+
 •	SW[17] is to enable double density mode (From 1 pipe on screen to 2 pipes  on screen which is spaced evenly). This Feature can be switch on or off on the fly.
 
 
 In all those states you can also use KEY.
+
 •	KEY[0] is used to reset everything except EEPROM data(which where the high score is located).
+
 •	KEY[1] is used to reset EEPROM data.
 
 
 3 button is used on the IR remote.
+
 •	IR2 is for jumping the bird.
+
 •	IR3 is used to shoot flames when flame is ready.
+
 •	Power button is used to change state between End game and idle state 
+
 FLASH is used to store two backgrounds and get ready screen.
 SRAM is used as a buffer for get ready screen picture, And the Data is stored inside the 8MB flash. At boot it will read data from flash to SRAM.
 
@@ -87,7 +100,12 @@ There are also a lot of small state machines inside the main states that manage 
 
 ## References
 Here are some of the references (I copied :)) that i used to make this project. So without them is will be impossible for me to make this project.
+
 [Game Asset by samuelcust](https://github.com/samuelcust/flappy-bird-assets)
+
 [Audio Driver from AhmadGon WM8731-Audio-CODEC](https://github.com/AhmadGon/WM8731-Audio-CODEC)
+
 [SD card module from WangXuan95](https://github.com/WangXuan95/FPGA-SDcard-Reader)
+
 [Mixing Audio to prevent clipping](https://www.vttoth.com/CMS/technical-notes/?view=article&id=68)
+
