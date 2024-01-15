@@ -1,0 +1,389 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk25M'
+Slack : -14.535
+TNS   : -1772.465
+
+Type  : Slow 1200mV 85C Model Setup 'physicsclk[0]'
+Slack : -10.785
+TNS   : -1217.894
+
+Type  : Slow 1200mV 85C Model Setup 'AUD_DACLRCK~reg0'
+Slack : -5.715
+TNS   : -235.288
+
+Type  : Slow 1200mV 85C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -4.513
+TNS   : -34.641
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -4.300
+TNS   : -573.939
+
+Type  : Slow 1200mV 85C Model Setup 'audioclk2'
+Slack : -4.293
+TNS   : -329.782
+
+Type  : Slow 1200mV 85C Model Setup 'div400:div_400HZ|clk400'
+Slack : -2.751
+TNS   : -47.094
+
+Type  : Slow 1200mV 85C Model Setup 'IR_RECEIVE:IR|data_ready'
+Slack : -1.699
+TNS   : -44.245
+
+Type  : Slow 1200mV 85C Model Setup 'I2C_Protocol:I2C|SCLK'
+Slack : -1.587
+TNS   : -22.475
+
+Type  : Slow 1200mV 85C Model Setup 'I2C_Protocol:I2C|finish_flag'
+Slack : -0.219
+TNS   : -0.434
+
+Type  : Slow 1200mV 85C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -0.172
+TNS   : -0.172
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.281
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'IR_RECEIVE:IR|data_ready'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'div400:div_400HZ|clk400'
+Slack : 0.385
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'physicsclk[0]'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk25M'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'audioclk2'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'AUD_DACLRCK~reg0'
+Slack : 0.406
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'I2C_Protocol:I2C|finish_flag'
+Slack : 0.406
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'I2C_Protocol:I2C|SCLK'
+Slack : 0.701
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clk'
+Slack : 17.283
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clk'
+Slack : 0.841
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'audioclk2'
+Slack : -2.693
+TNS   : -206.364
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk25M'
+Slack : -1.285
+TNS   : -296.835
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'physicsclk[0]'
+Slack : -1.285
+TNS   : -286.555
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'AUD_DACLRCK~reg0'
+Slack : -1.285
+TNS   : -66.820
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'div400:div_400HZ|clk400'
+Slack : -1.285
+TNS   : -48.830
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'IR_RECEIVE:IR|data_ready'
+Slack : -1.285
+TNS   : -39.835
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'I2C_Protocol:I2C|SCLK'
+Slack : -1.285
+TNS   : -19.275
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'I2C_Protocol:I2C|finish_flag'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : 9.622
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pll1|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 1947.612
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk25M'
+Slack : -13.030
+TNS   : -1607.321
+
+Type  : Slow 1200mV 0C Model Setup 'physicsclk[0]'
+Slack : -9.626
+TNS   : -1090.860
+
+Type  : Slow 1200mV 0C Model Setup 'AUD_DACLRCK~reg0'
+Slack : -5.170
+TNS   : -211.750
+
+Type  : Slow 1200mV 0C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -3.937
+TNS   : -30.212
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -3.836
+TNS   : -495.528
+
+Type  : Slow 1200mV 0C Model Setup 'audioclk2'
+Slack : -3.830
+TNS   : -293.407
+
+Type  : Slow 1200mV 0C Model Setup 'div400:div_400HZ|clk400'
+Slack : -2.472
+TNS   : -39.554
+
+Type  : Slow 1200mV 0C Model Setup 'IR_RECEIVE:IR|data_ready'
+Slack : -1.620
+TNS   : -41.682
+
+Type  : Slow 1200mV 0C Model Setup 'I2C_Protocol:I2C|SCLK'
+Slack : -1.356
+TNS   : -19.115
+
+Type  : Slow 1200mV 0C Model Setup 'I2C_Protocol:I2C|finish_flag'
+Slack : -0.102
+TNS   : -0.200
+
+Type  : Slow 1200mV 0C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -0.274
+TNS   : -0.274
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.288
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'physicsclk[0]'
+Slack : 0.337
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'div400:div_400HZ|clk400'
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk25M'
+Slack : 0.352
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'IR_RECEIVE:IR|data_ready'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'audioclk2'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'AUD_DACLRCK~reg0'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'I2C_Protocol:I2C|finish_flag'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'I2C_Protocol:I2C|SCLK'
+Slack : 0.644
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clk'
+Slack : 17.485
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clk'
+Slack : 0.775
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'audioclk2'
+Slack : -2.649
+TNS   : -204.252
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk25M'
+Slack : -1.285
+TNS   : -296.835
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'physicsclk[0]'
+Slack : -1.285
+TNS   : -286.555
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'AUD_DACLRCK~reg0'
+Slack : -1.285
+TNS   : -66.820
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'div400:div_400HZ|clk400'
+Slack : -1.285
+TNS   : -48.830
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'IR_RECEIVE:IR|data_ready'
+Slack : -1.285
+TNS   : -39.835
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'I2C_Protocol:I2C|SCLK'
+Slack : -1.285
+TNS   : -19.275
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'I2C_Protocol:I2C|finish_flag'
+Slack : -1.285
+TNS   : -5.140
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.643
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pll1|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 1947.603
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk25M'
+Slack : -6.508
+TNS   : -774.905
+
+Type  : Fast 1200mV 0C Model Setup 'physicsclk[0]'
+Slack : -4.657
+TNS   : -509.308
+
+Type  : Fast 1200mV 0C Model Setup 'AUD_DACLRCK~reg0'
+Slack : -2.498
+TNS   : -94.079
+
+Type  : Fast 1200mV 0C Model Setup 'pll1|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -2.048
+TNS   : -15.651
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -2.046
+TNS   : -169.426
+
+Type  : Fast 1200mV 0C Model Setup 'audioclk2'
+Slack : -1.638
+TNS   : -118.987
+
+Type  : Fast 1200mV 0C Model Setup 'div400:div_400HZ|clk400'
+Slack : -0.891
+TNS   : -8.766
+
+Type  : Fast 1200mV 0C Model Setup 'IR_RECEIVE:IR|data_ready'
+Slack : -0.479
+TNS   : -9.263
+
+Type  : Fast 1200mV 0C Model Setup 'I2C_Protocol:I2C|SCLK'
+Slack : -0.274
+TNS   : -3.295
+
+Type  : Fast 1200mV 0C Model Setup 'I2C_Protocol:I2C|finish_flag'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'pll1|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -0.088
+TNS   : -0.088
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.105
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'div400:div_400HZ|clk400'
+Slack : 0.173
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'physicsclk[0]'
+Slack : 0.173
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'IR_RECEIVE:IR|data_ready'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'audioclk2'
+Slack : 0.180
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk25M'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'AUD_DACLRCK~reg0'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'I2C_Protocol:I2C|finish_flag'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'I2C_Protocol:I2C|SCLK'
+Slack : 0.313
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clk'
+Slack : 18.602
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clk'
+Slack : 0.392
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk25M'
+Slack : -1.000
+TNS   : -231.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'physicsclk[0]'
+Slack : -1.000
+TNS   : -223.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'audioclk2'
+Slack : -1.000
+TNS   : -108.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'AUD_DACLRCK~reg0'
+Slack : -1.000
+TNS   : -52.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'div400:div_400HZ|clk400'
+Slack : -1.000
+TNS   : -38.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'IR_RECEIVE:IR|data_ready'
+Slack : -1.000
+TNS   : -31.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'I2C_Protocol:I2C|SCLK'
+Slack : -1.000
+TNS   : -15.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'I2C_Protocol:I2C|finish_flag'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 9.371
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pll1|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 1947.696
+TNS   : 0.000
+
+------------------------------------------------------------

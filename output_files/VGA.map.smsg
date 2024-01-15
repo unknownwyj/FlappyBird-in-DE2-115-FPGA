@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at sdcmd_ctrl.v(26): object "timeout" differs only in case from object "TIMEOUT" in the same scope File: C:/gitstuff/fpgastuff/vgaoutfromrom/AudioStuff/sdcard/sdcmd_ctrl.v Line: 26
+Info (10281): Verilog HDL Declaration information at sd_reader.v(33): object "rdone" differs only in case from object "RDONE" in the same scope File: C:/gitstuff/fpgastuff/vgaoutfromrom/AudioStuff/sdcard/sd_reader.v Line: 33

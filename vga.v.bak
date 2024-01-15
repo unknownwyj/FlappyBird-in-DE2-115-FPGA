@@ -1,0 +1,142 @@
+module VGA(clk,KEY, VGA_HS, VGA_VS ,VGA_R, VGA_G, VGA_B,VGA_BLANK_N,VGA_CLOCK,LEDR,FL_ADDR,FL_DQ,FL_CE_N,FL_OE_N,FL_RST_N,FL_WE_N,FL_WP_N);
+input [3:0]KEY;
+output [17:0]LEDR;
+assign LEDR[0] = start;
+wire rst;
+assign rst = KEY[0]; 
+input clk;		//clk 50MHz
+output VGA_HS, VGA_VS;
+output [7:0] VGA_R,VGA_G,VGA_B;
+output VGA_BLANK_N,VGA_CLOCK;
+
+reg VGA_HS, VGA_VS;
+reg[10:0] counterHS;
+reg[9:0] counterVS;
+reg [2:0] valid;
+reg clk25M;
+
+reg [12:0] X,Y;
+//? FLASH STUFF
+output FL_CE_N;
+output FL_OE_N; // 
+output FL_RST_N; // always high
+output FL_WE_N; // always high
+output FL_WP_N; // not used
+input [7:0] FL_DQ;
+output [22:0] FL_ADDR;
+assign FL_WE_N = 1'b1;
+assign FL_RST_N = 1'b1;
+assign FL_CE_N = 1'b0; // always read
+assign FL_OE_N = 1'b0; // always read
+//? FLASH STUFF END
+parameter H_FRONT = 16;										// state E
+parameter H_SYNC  = 96;										// state B
+parameter H_BACK  = 48;										// state C
+parameter H_ACT   = 640;									// state D
+parameter H_BLANK = H_FRONT + H_SYNC + H_BACK;
+parameter H_TOTAL = H_FRONT + H_SYNC + H_BACK + H_ACT;
+
+parameter V_FRONT = 11;										// state S
+parameter V_SYNC  = 2;										// state P
+parameter V_BACK  = 32;										// state Q
+parameter V_ACT   = 480;									// state R
+parameter V_BLANK = V_FRONT + V_SYNC + V_BACK;
+parameter V_TOTAL = V_FRONT + V_SYNC + V_BACK + V_ACT;
+assign VGA_SYNC_N = 1'b0;
+assign VGA_BLANK_N = ~((counterHS<H_BLANK)||(counterVS<V_BLANK));
+assign VGA_CLOCK = ~clk25M;
+
+always@(posedge clk)
+	clk25M = ~clk25M;
+
+// DON'T MOVE
+always@(posedge clk25M)begin
+	if(!rst) 
+		counterHS <= 0;
+	else begin
+	
+		if(counterHS == H_TOTAL) 
+			counterHS <= 0;
+		else 
+			counterHS <= counterHS + 1'b1;
+		
+		if(counterHS == H_FRONT-1)
+			VGA_HS <= 1'b0;
+		if(counterHS == H_FRONT + H_SYNC -1)
+			VGA_HS <= 1'b1;
+			
+		if(counterHS >= H_BLANK)							// record X position
+			X <= counterHS-H_BLANK;
+		else
+			X <= 0;	
+	end
+end
+
+// DON'T MOVE
+always@(posedge clk25M)begin
+	if(!rst) 
+		counterVS <= 0;
+	else begin
+	
+		if(counterVS == V_TOTAL) 
+			counterVS <= 0;
+		else if(counterHS == H_TOTAL) 
+			counterVS <= counterVS + 1'b1;
+			
+		if(counterVS == V_FRONT-1)
+			VGA_VS <= 1'b0;
+		if(counterVS == V_FRONT + V_SYNC -1)
+			VGA_VS <= 1'b1;
+		if(counterVS >= V_BLANK)							// record Y position
+			Y <= counterVS-V_BLANK;
+		else
+			Y <= 0;
+	end
+end
+assign FL_ADDR = counter;
+reg [23:0]color[3:0];
+parameter   width = 184,
+            height = 267;
+reg [7:0] selectcolor; // if == 179 then is background
+
+decodecolor decodecolor0(
+    .color(selectcolor),
+    .red(VGA_R),
+    .green(VGA_G),
+    .blue(VGA_B)
+);
+reg [23:0]counter;
+always@(posedge clk25M)
+begin
+	if (!rst) 
+	begin
+        counter <= 2;
+   end
+	else 
+	begin
+        // X and Y are the coordinates of the pixel
+        //only when width is < 184 and height is < 267 counter is incremented if X and Y are 480 and 640 reset counter
+        if (X == 640 && Y == 480)
+        begin
+            counter <= 2; // 2 because it is the first pixel
+        end
+        else if (X < width && Y < height)
+        begin
+            counter <= counter + 1'b1;
+        end
+        else 
+        begin
+            counter <= counter;
+        end
+        if(X > width && Y > height)
+        begin
+            selectcolor <= 1; // black color
+        end
+        else
+        begin
+            selectcolor <= FL_DQ;
+        end
+   end
+end
+endmodule
+
